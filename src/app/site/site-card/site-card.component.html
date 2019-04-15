@@ -1,0 +1,12 @@
+<a [routerLink]="['site-detail']" [queryParams]="{siteId: data.id}">
+<div class="media border p-3 pointer" >
+    <img *ngIf="data.images.length>0" [src]="data.images[0]" alt="site_image" class="mr-3 mt-3 rounded-circle image_size" >
+    <div class="media-body">
+      <h4>{{data.title}} <small><i>Posted on {{data.createdAt | date:'medium'}}</i></small></h4>
+      <p>{{data.address.street}} , {{data.address.city}} , {{data.address.state}} , {{data.address.country}} , {{data.address.zipCode}}</p>   
+      <p class="text-decorated">Contact Info : </p>
+      <p>{{data.contacts.main.firstName}} {{data.contacts.main.lastName}}, {{data.contacts.main.jobTitle}}</p>
+      <p>Email: {{data.contacts.main.email}}, Ph: {{data.contacts.main.phoneNumber}}</p>
+    </div>
+  </div>
+</a>

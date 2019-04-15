@@ -1,0 +1,25 @@
+<div class="container mt-3">
+ 	<h2>All Sites</h2>
+ <!-- site list filter -->
+  	<div class="col-sm-12 ui-g bg-primary text-white">
+		<div class="ui-g-12 ui-md-4" >
+			
+		</div>
+		<div class="ui-g-12 ui-md-4" >
+			<select class="form-control" [(ngModel)]="sortingOption" (change)="sortListing()">
+				<option value="asc" >Ascending order</option>
+				<option value="desc">Descending order</option>
+			</select>
+		</div>
+	    <div class="ui-g-12 ui-md-4">
+	        <form (ngSubmit)="searchBasedonClient()" >
+	        	<input type="text" class="form-control" placeholder="Search based on client"  [(ngModel)]="searchClient" name="searchClient">
+			   	<button class="btn btn-default" type="submit" [hidden]="true" ></button>
+			</form>
+	    </div>
+	</div>
+<!-- site list -->
+  <app-site-card *ngFor="let siteResultdata of siteResult" [data]="siteResultdata" ></app-site-card>
+  <hr/>
+  <p-paginator [rows]="10" [totalRecords]="siteResponseTotalLength" (onPageChange)="paginate($event)"></p-paginator>
+</div>

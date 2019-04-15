@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <a class="navbar-brand" routerLink="/">Site App</a>
+    <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	  <ul class="navbar-nav mr-auto">
+	    <li class="nav-item ">
+	      <a class="nav-link" routerLink="/site">Sites</a>
+	    </li>
+	  </ul>
+	  <ul class="navbar-nav">
+	  	<li class="nav-item dropdown">
+	  		<a class="nav-link pointer dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  			{{myDetails.username}}
+	  			<img src="{{myDetails.avatar}}" width="40px" class="rounded-circle image_size">
+	  		</a>
+	  		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="mailto:{{myDetails.email}}">{{myDetails.email}}</a>
+	          <a class="dropdown-item" >{{myDetails.givenName}}</a>
+	        </div>
+	  	</li>
+	  </ul>
+	</div>
+</nav>

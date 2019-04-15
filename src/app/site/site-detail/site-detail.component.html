@@ -1,0 +1,74 @@
+<div class="col-sm-12 ui-g bg-primary text-white">
+	<div class="ui-g-2 pointer" routerLink="site" >
+		<b class="fa fa-arrow-left makeITbigger"></b>
+	</div>
+    <div class="ui-g-10">
+    	<div>{{siteResponse.title}}</div>
+    	<div *ngIf="siteResponse.address">{{siteResponse.address.street}} , {{siteResponse.address.city}} , {{siteResponse.address.state}} , {{siteResponse.address.country}} , {{siteResponse.address.zipCode}}</div>
+    </div>
+</div>
+<div class="container mt-3">
+	<p-carousel headerText="Site Details" [value]="images" numVisible="2" circular="circular" autoplayInterval="3000" responsive="true" easing="easeOutStrong">
+		<ng-template let-item pTemplate="item">
+	        <div class="ui-grid ui-grid-responsive">
+	            <div class="ui-grid-row">
+	                <div class="ui-grid-col-12 text-center">
+	                	<img src="{{item}}" alt="siteImages" height="300px">
+	                </div>
+	            </div>
+	        </div>
+	    </ng-template>
+	</p-carousel>
+	<hr/>
+
+	<!-- table view for below content -->
+	<div class="table-responsive">
+		<table class="table" *ngIf="siteResponse.contacts">
+	    	<tr>
+	            <td>
+	            	<i class="fa fa-user"></i>
+	            </td>
+	            <td>
+	            	<div>
+	            		{{siteResponse.contacts.main.firstName}} {{siteResponse.contacts.main.lastName}}
+	            	</div>
+	            	<div>
+	            		<small>{{siteResponse.contacts.main.jobTitle}}</small>
+	            	</div>
+	            </td>
+	        </tr>
+	        <tr>
+	        	<td>
+	        		<i class="fa fa-phone"></i>
+	        	</td>
+	            <td>
+	            	{{siteResponse.contacts.main.phoneNumber}}
+	            </td>
+	        </tr>
+	        <tr>
+	        	<td>
+	        		<i class="fa fa-envelope"></i>
+	        	</td>
+	            <td>
+	            	{{siteResponse.contacts.main.email}}
+	            </td>
+	        </tr>
+	        <tr>
+	        	<td>
+	        		<i class="fa fa-map-marker"></i>
+	        	</td>
+	            <td>
+	            	{{siteResponse.contacts.main.address.street}}, {{siteResponse.address.city}} , {{siteResponse.address.state}} , {{siteResponse.address.country}} , {{siteResponse.address.zipCode}}
+	            </td>
+	        </tr>
+	        <tr>
+	        	<td>
+	        		<i class="fa fa-user"></i>
+	        	</td>
+	            <td>
+	            	Client: {{siteResponse.client.givenName}}
+	            </td>
+	        </tr>
+		</table>
+	</div>
+</div>
