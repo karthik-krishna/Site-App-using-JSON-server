@@ -1,6 +1,6 @@
 # SiteApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7 using json-server for backend . It is responsive by nature and it is made universal app for server side rendering of the application. Unit tested for all services used 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7 using json-server for backend . It is responsive by nature and it is made universal app for server side rendering of the application. Unit tested for all services used. Keeping future scalability and future enhancements in mind, I have made use of lazyloading.
 
 ## Development server
 
