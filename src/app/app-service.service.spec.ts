@@ -13,4 +13,20 @@ describe('AppServiceService', () => {
     const service: AppServiceService = TestBed.get(AppServiceService);
     expect(service).toBeTruthy();
   });
+
+  it('should be give details of my profile', (done) => {
+    const service: AppServiceService = TestBed.get(AppServiceService);
+    service.getMyDetails().subscribe((data :any) =>{
+    	expect(data.email).toEqual('Edwin16@gmail.com');
+    	done();
+    })
+  });
+
+  it('check base url is not empty string', () => {
+    const service: AppServiceService = TestBed.get(AppServiceService);
+    expect(service.baseUrl).not.toBe(null);
+    
+  });
+
+
 });

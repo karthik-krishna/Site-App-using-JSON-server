@@ -28,21 +28,21 @@ describe('SiteServiceService', () => {
 
   it('should be give all site data', (done) => {
     const service: SiteServiceService = TestBed.get(SiteServiceService);
-    service.getAllSites(0,2,'asc','').subscribe((data) =>{
+    service.getAllSites(0,2,'asc','').subscribe((data : any) =>{
     	console.log(data.body);
     	expect(data.body.length>0 && data.body.length<2);
     	done();
     })
-  },1000);
+  });
 
   it('should be give particular data', (done) => {
     const service: SiteServiceService = TestBed.get(SiteServiceService);
-    service.getSiteDetail('evFHCQwfoC').subscribe((data) =>{
+    service.getSiteDetail('evFHCQwfoC').subscribe((data :any) =>{
     	console.log(data.id);
     	expect(data.id).toEqual('evFHCQwfoC');
     	done();
     })
-  },1000);
+  });
 
 
 
