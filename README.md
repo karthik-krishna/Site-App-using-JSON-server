@@ -8,9 +8,13 @@ Step 1 : Clone this project
 
 Step 2 : Go to the folder where project is situated
 
-Step 3 : Run `npm install` to install all the dependencies
+Step 3 : For backend apis we are using json-server, so run `npm install -g json-server` 
 
-Step 3 : Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Step 4 : Run `json-server --watch db.json` and backend apis will be running in `http://localhost:3000` 
+
+Step 5 : Run `npm install` to install all the dependencies
+
+Step 6 : Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
 ## Code scaffolding
