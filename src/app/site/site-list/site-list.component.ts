@@ -11,8 +11,8 @@ export class SiteListComponent implements OnInit {
   constructor(private siteService:SiteServiceService) { }
   public siteResponse:ISite[]=[];
   public siteResult:ISite[]=[];
-  private start:number=0;
-  private end:number=10;
+  public start:number=0;
+  public end:number=10;
   public siteResponseTotalLength:String;
   sortingOption:String='asc';
   public searchClient:String='';

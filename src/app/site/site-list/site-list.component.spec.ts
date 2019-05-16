@@ -35,4 +35,27 @@ describe('SiteListComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h2').textContent).toContain('All Sites');
   });
+
+  it('should paginate', () => {
+    const fixture = TestBed.createComponent(SiteListComponent);
+    fixture.detectChanges();
+    let event={ first:1 }
+    component.paginate(event);
+    expect(component.start).toEqual(1);
+  });
+
+  it('should get all site details', () => {
+    const fixture = TestBed.createComponent(SiteListComponent);
+    fixture.detectChanges();
+    component.getAllSites(0,10,'asc','');
+    expect(component.siteResponseTotalLength).not.toBe('');
+  });
+
+  it('should get all site based on search', () => {
+    const fixture = TestBed.createComponent(SiteListComponent);
+    fixture.detectChanges();
+    component.searchBasedonClient();
+    expect(component.sortingOption).not.toBe('');
+  });
+
 });
