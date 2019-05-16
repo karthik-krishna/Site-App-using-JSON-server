@@ -44,18 +44,11 @@ describe('SiteListComponent', () => {
     expect(component.start).toEqual(1);
   });
 
-  it('should get all site details', () => {
-    const fixture = TestBed.createComponent(SiteListComponent);
-    fixture.detectChanges();
-    component.getAllSites(0,10,'asc','');
-    expect(component.siteResponseTotalLength).not.toBe('');
-  });
-
   it('should get all site based on search', () => {
     const fixture = TestBed.createComponent(SiteListComponent);
     fixture.detectChanges();
     component.searchBasedonClient();
-    expect(component.sortingOption).not.toBe('');
+    expect(component.searchClient).toBe('');
   });
 
 });
