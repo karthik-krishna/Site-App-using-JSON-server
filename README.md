@@ -24,6 +24,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Code scaffolding
+## Code Coverage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Statements   : 89.29% ( 75/84 )
+Branches     : 100% ( 0/0 )
+Functions    : 84% ( 21/25 )
+Lines        : 87.5% ( 63/72 )
