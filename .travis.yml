@@ -25,6 +25,9 @@ install:
 after_success:
   - codecov --file coverage/lcov.info --disable search
 
+before_script:
+    - "npm i -g istanbul"
+
 script:
   - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI --source-map=false  --watch=false
   - npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
