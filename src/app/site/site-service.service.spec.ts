@@ -26,7 +26,7 @@ describe('SiteServiceService', () => {
 	  }, 2000);
 	});
 
-  it('should be give all site data', (done) => {
+  xit('should be give all site data', (done) => {
     const service: SiteServiceService = TestBed.get(SiteServiceService);
     service.getAllSites(0,2,'asc','').subscribe((data : any) =>{
     	console.log(data.body);
@@ -35,7 +35,7 @@ describe('SiteServiceService', () => {
     })
   });
 
-  it('should be give particular data', (done) => {
+  xit('should be give particular data', (done) => {
     const service: SiteServiceService = TestBed.get(SiteServiceService);
     service.getSiteDetail('evFHCQwfoC').subscribe((data :any) =>{
     	console.log(data.id);
