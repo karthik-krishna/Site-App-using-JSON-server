@@ -28,7 +28,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Code Coverage
 
-Statements   : 89.29% ( 75/84 )
+Statements   : 87.06% ( 74/85 )
 Branches     : 100% ( 0/0 )
-Functions    : 84% ( 21/25 )
-Lines        : 87.5% ( 63/72 )
+Functions    : 81.25% ( 26/32 )
+Lines        : 88.1% ( 74/84 )
