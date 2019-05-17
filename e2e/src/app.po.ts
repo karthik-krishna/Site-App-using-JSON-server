@@ -4,8 +4,4 @@ export class AppPage {
   navigateTo() {
     return browser.get(browser.baseUrl) as Promise<any>;
   }
-
-  getTitleText() {
-    return element(by.css('app-root span')).getText() as Promise<string>;
-  }
 }
