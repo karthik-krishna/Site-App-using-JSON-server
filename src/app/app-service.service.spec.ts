@@ -14,7 +14,7 @@ describe('AppServiceService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should be give details of my profile', (done) => {
+  xit('should be give details of my profile', (done) => {
     const service: AppServiceService = TestBed.get(AppServiceService);
     service.getMyDetails().subscribe((data :any) =>{
     	expect(data.email).toEqual('Edwin16@gmail.com');
