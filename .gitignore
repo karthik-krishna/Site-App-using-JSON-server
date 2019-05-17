@@ -40,8 +40,8 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/.coveralls.yml
 
 # System Files
 .DS_Store
 Thumbs.db
-./.coveralls.yml
